@@ -1,0 +1,9 @@
+.books {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 3vw auto;
+	font-family: "Zilla Slab", serif;
+	font-size: 20.7px;
+}

@@ -1,0 +1,84 @@
+.hidden {
+	display: none;
+}
+
+.modal {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+	background-color: black;
+	opacity: 93%;
+	color: white;
+	margin: 7% auto;
+	padding: 5.9vw 1vw;
+	border-radius: 10px;
+	box-shadow: 2.5px 2px 3px black;
+	width: 32%;
+	height: 57%;
+}
+
+/* The Close Button */
+.close {
+	margin-top: -9vh;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: -3.5vh auto;
+}
+
+.inputStyle {
+	margin: 2vh 0vw;
+	width: 98%;
+	height: 4vh;
+	border-radius: 7px;
+}
+
+#readInput {
+	align-self: flex-start;
+	margin: 3vh 0.2vw;
+	transform: scale(1.1);
+}
+
+#submitBtn {
+	border: none;
+	margin-top: 1.5vh;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+
+#submitBtn:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+#submitBtn:active {
+	box-shadow: 1px 1px inset black;
+	transform: scale(0.995);
+}
