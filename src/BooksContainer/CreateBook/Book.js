@@ -4,14 +4,19 @@ import "./Book.css";
 
 function Book(props) {
   return (
-    <div className="singleBook" data-attribute={props.bookInfo.author}>
+    <div className="singleBook" metadata={props.metadata}>
       {props.bookInfo.title +
         " by " +
         props.bookInfo.author +
         ". " +
-        props.bookInfo.pages +
+        props.bookInfo.pageNum +
         " pages"}
-      <img className="removeBtn" alt="remove button" src={rmvBtn} />
+      <img
+        className="removeBtn"
+        alt="remove button"
+        src={rmvBtn}
+        onClick={props.rmvBook}
+      />
       <label className="checkReadLabel">Read</label>
       <input
         id="readInput"
@@ -19,6 +24,7 @@ function Book(props) {
         type="checkbox"
         name="readInput"
         checked={props.bookInfo.read}
+        onChange={props.toggleRead}
       />
     </div>
   );

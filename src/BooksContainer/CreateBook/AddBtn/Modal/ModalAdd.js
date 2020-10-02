@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ModalAdd.css";
 
 function ModalAdd(props) {
+  const [newBook, setNewBook] = useState({
+    title: "",
+    author: "",
+    pageNum: "",
+    read: false,
+  });
+
+  function handleChange(e) {
+    const { name, value, checked, type } = e.target;
+    const temp = type === "checkbox" ? checked : value; // for checkboxes must use 'checked' instead of 'value'
+
+    setNewBook((prevState) => ({ ...prevState, [name]: temp }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (newBook.title.length < 1 || newBook.author.length < 1) return;
+    if (isNaN(newBook.pageNum)) return;
+    props.addBook(newBook);
+    props.toggleModal();
+
+    const clearState = {
+      title: "",
+      author: "",
+      pageNum: "",
+      read: false,
+    };
+    setNewBook(clearState);
+  }
+
   return (
     <div onClick={props.toggleModal} id="myModal" className={props.modalClass}>
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>
@@ -9,54 +40,65 @@ function ModalAdd(props) {
           {"\u00D7"}
         </span>
         <form>
-          <label htmlFor="TitleInput">Title of the Book:</label>
+          <label htmlFor="title">Title of the Book:</label>
           <br />
           <input
             className="inputStyle"
             type="text"
-            id="TitleInput"
-            name="TitleInput"
+            id="titleInput"
+            name="title"
+            onChange={handleChange}
+            value={newBook.title}
             required="required"
           />
           <br />
 
-          <label htmlFor="authorInput">Author:</label>
+          <label htmlFor="author">Author:</label>
           <br />
           <input
             className="inputStyle"
             type="text"
             id="authorInput"
-            name="authorInput"
+            name="author"
+            onChange={handleChange}
+            value={newBook.author}
             required="required"
           />
           <br />
 
-          <label htmlFor="pageNumInput">Number of Pages:</label>
+          <label htmlFor="pageNum">Number of Pages:</label>
           <br />
           <input
             className="inputStyle"
-            type="number"
+            type="text"
             id="pageNumInput"
-            name="pageNumInput"
+            name="pageNum"
+            onChange={handleChange}
+            value={newBook.pageNum}
             required="required"
           />
           <br />
 
-          <label htmlFor="readInput">
-            Tick the box if you've already read it
-          </label>
+          <label htmlFor="read">Tick the box if you've already read it</label>
           <br />
           <input
             type="checkbox"
             id="readInput"
-            name="readInput"
-            defaultChecked={true}
+            name="read"
+            onChange={handleChange}
+            checked={newBook.read}
           />
           <br />
 
           <label htmlFor="submitBtn"></label>
           <br />
-          <input type="submit" id="submitBtn" name="submitBtn" value="Submit" />
+          <input
+            onClick={handleSubmit}
+            type="submit"
+            id="submitBtn"
+            name="submitBtn"
+            value="Submit"
+          />
           <br />
         </form>
       </div>
