@@ -2,7 +2,7 @@
 
 [Odin] Recreation of the Project using the ReactJS 16 Framework
 
-<!-- > See it live on [notstoe.github.io/todo-list](https://notstoe.github.io/todo-list/) -->
+> See it live on [notstoe.github.io/small-library-react](https://notstoe.github.io/small-library-react/)
 
 # objectives
 
