@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/small-library-react/static/css/main.056eebe7.chunk.css",
+    "main.css": "/small-library-react/static/css/main.abe151f5.chunk.css",
     "main.js": "/small-library-react/static/js/main.ff48ae71.chunk.js",
     "main.js.map": "/small-library-react/static/js/main.ff48ae71.chunk.js.map",
     "runtime-main.js": "/small-library-react/static/js/runtime-main.87c9ae7e.js",
@@ -8,16 +8,16 @@
     "static/js/2.47200757.chunk.js": "/small-library-react/static/js/2.47200757.chunk.js",
     "static/js/2.47200757.chunk.js.map": "/small-library-react/static/js/2.47200757.chunk.js.map",
     "index.html": "/small-library-react/index.html",
-    "precache-manifest.fd9938cbdd5d2faf16515d6ba61f3801.js": "/small-library-react/precache-manifest.fd9938cbdd5d2faf16515d6ba61f3801.js",
+    "precache-manifest.0bc299779eb3e540e86c6377f379ff43.js": "/small-library-react/precache-manifest.0bc299779eb3e540e86c6377f379ff43.js",
     "service-worker.js": "/small-library-react/service-worker.js",
-    "static/css/main.056eebe7.chunk.css.map": "/small-library-react/static/css/main.056eebe7.chunk.css.map",
+    "static/css/main.abe151f5.chunk.css.map": "/small-library-react/static/css/main.abe151f5.chunk.css.map",
     "static/js/2.47200757.chunk.js.LICENSE.txt": "/small-library-react/static/js/2.47200757.chunk.js.LICENSE.txt",
     "static/media/github.png": "/small-library-react/static/media/github.02e85c27.png"
   },
   "entrypoints": [
     "static/js/runtime-main.87c9ae7e.js",
     "static/js/2.47200757.chunk.js",
-    "static/css/main.056eebe7.chunk.css",
+    "static/css/main.abe151f5.chunk.css",
     "static/js/main.ff48ae71.chunk.js"
   ]
 }
