@@ -5,8 +5,13 @@ import Modal from "./CreateBook/AddBtn/Modal/ModalAdd";
 import AddBtn from "./CreateBook/AddBtn/AddBtn";
 
 function BooksContainer() {
-  const [books, setBooks] = useState([]);
+  const storagedBooks = JSON.parse(window.localStorage.getItem("lib")) || [];
+  const [books, setBooks] = useState(storagedBooks);
   const [modalClass, setModalClass] = useState("modal hidden");
+
+  useEffect(() => {
+    window.localStorage.setItem("lib", JSON.stringify(books));
+  }, [books]);
 
   function addBook(newBook) {
     let newState = books.slice();
